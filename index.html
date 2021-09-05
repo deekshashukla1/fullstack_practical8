@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <title>Practical - 8</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Azeret Mono", monospace;
+      }
+
+      .container {
+        width: 100%;
+        height: 1700px;
+        border: 2px solid black;
+      }
+
+      .header {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 5px;
+        background-color: rgb(61, 58, 58);
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        position: fixed;
+      }
+      .header ul li {
+        display: inline-block;
+        margin: 0px 50px 0px 50px;
+      }
+
+      .header ul li a {
+        color: white;
+        border: none;
+        background-color: rgb(61, 58, 58);
+        text-decoration: none;
+        padding: 10px;
+      }
+
+      .header ul li a:hover {
+        background-color: rgb(95, 83, 51);
+        border-radius: 15px;
+      }
+
+      .banner {
+        /* background-color: rgb(150, 193, 223); */
+        width: auto;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        margin-bottom: 5px;
+        height: 400px;
+      }
+
+      .img {
+        background-image: url("assets/banner.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 400px;
+      }
+
+      .section-1 {
+        width: auto;
+        height: fit-content;
+        padding: 10px;
+        /* border: 2px solid black; */
+        text-align: center;
+        margin-bottom: 5px;
+      }
+
+      #c-1 {
+        height: 150px;
+        width: 100px;
+        border-radius: 50px;
+        /* border:2px solid black; */
+        display: inline-block;
+        text-align: center;
+        margin-right: 130px;
+        margin-left: 130px;
+        background-color: rgb(197, 154, 37);
+        background-image: url("assets/c-1.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #c-2 {
+        height: 150px;
+        width: 100px;
+        border-radius: 50px;
+        /* border:2px solid black; */
+        display: inline-block;
+        text-align: center;
+        margin-right: 130px;
+        margin-left: 130px;
+        background-color: rgb(197, 154, 37);
+        background-image: url("assets/c-2.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #c-3 {
+        height: 150px;
+        width: 100px;
+        border-radius: 50px;
+        /* border:2px solid black; */
+        display: inline-block;
+        text-align: center;
+        margin-right: 130px;
+        margin-left: 130px;
+        background-color: rgb(197, 154, 37);
+        background-image: url("assets/c-3.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #c-4 {
+        height: 150px;
+        width: 100px;
+        border-radius: 50px;
+        /* border:2px solid black; */
+        display: inline-block;
+        text-align: center;
+        margin-right: 130px;
+        margin-left: 130px;
+        background-color: rgb(197, 154, 37);
+        background-image: url("assets/c-4.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .section-2 {
+        width: auto;
+        height: 420px;
+        text-align: center;
+        margin-bottom: 5px;
+        /* border: 2px solid black; */
+      }
+
+      .main-content {
+        color: white;
+        background-color: grey;
+        /* padding: 175px; */
+        height: 365px;
+        width: 49%;
+        margin: 2px;
+        float: left;
+        overflow: auto;
+      }
+      .main-content h3 {
+        margin-bottom: 11px;
+      }
+      #a-1 {
+        width: 50%;
+        background-color: rgb(230, 119, 29);
+        /* padding: 48px; */
+        height: 120px;
+        float: right;
+        margin-bottom: 5px;
+        font-style: italic;
+        /* text-align: center; */
+        color: black;
+        font-size: 20px;
+        background-image: url("assets/a-1.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid black;
+      }
+      #a-2 {
+        width: 50%;
+        background-color: rgb(230, 119, 29);
+        /* padding: 48px; */
+        height: 120px;
+        float: right;
+        margin-bottom: 5px;
+        /* text-align: center; */
+        color: black;
+        font-size: 20px;
+        background-image: url("assets/a-2.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid black;
+      }
+      #a-3 {
+        width: 50%;
+        background-color: rgb(230, 119, 29);
+        /* padding: 48px; */
+        height: 120px;
+        float: right;
+        margin-bottom: 5px;
+        /* text-align: center; */
+        color: black;
+        font-size: 20px;
+        background-image: url("assets/a-3.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid black;
+      }
+
+      .section-3 {
+        width: 100%;
+        height: 550px;
+        text-align: center;
+        margin-bottom: 0px;
+        /* border:2px solid black; */
+      }
+      .section-3 h1 {
+        margin-left: 0px;
+      }
+
+      /* .rect {
+        height: 200px;
+        width: 200px;
+        background-color: orangered;
+        display: inline-block;
+        margin-left: 80px;
+        margin-right: 80px;
+      } */
+
+      .section-4 {
+        text-align: center;
+      }
+      .footer {
+        width: 100%;
+        padding: 10px;
+        margin: 5px;
+        background-color: rgb(206, 144, 221);
+        text-align: center;
+        color: white;
+        font-size: 20px;
+      }
+
+      h1 {
+        margin-top: 10px;
+        margin-left: 0px;
+      }
+      img {
+        width: 250px;
+        height: 120px;
+        margin-top: 10px;
+      }
+      h4 {
+        margin-top: 20%;
+      }
+
+      .container1 {
+        background-color: azure;
+        border: 4px solid black;
+        border-radius: 10px;
+        width: 21%;
+        height: 430px;
+        padding: 10px;
+        overflow: hidden;
+        text-align: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-right: 8px;
+        display: inline-block;
+      }
+      .read-more {
+        margin-top: 30px;
+        border: 4px solid black;
+        /* height: 0px; */
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        background-color: black;
+        border-radius: 10px;
+        background-color: brown;
+      }
+      .read-more:hover {
+        background-color: blueviolet;
+      }
+      .read-more a {
+        color: white;
+        text-decoration: none;
+      }
+      body {
+        background-color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="header">
+          <ul>
+            <li><a href="#b">Home</a></li>
+            <li><a href="#t">About</a></li>
+            <li><a href="#a">Team</a></li>
+            <li><a href="#t2">Technologies</a></li>
+            <li><a href="#c">Contact US</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="banner" id="b">
+        <div class="img"></div>
+      </div>
+      <div class="section-1" id="a">
+        <h1>TEAM MEMBERS</h1>
+        <div class="circle" id="c-1"></div>
+        <div class="circle" id="c-2"></div>
+        <div class="circle" id="c-3"></div>
+        <div class="circle" id="c-4"></div>
+      </div>
+      <div class="section-2" id="t">
+        <h1>ABOUT US</h1>
+        <div class="main-content">
+          <h3>ABOUT PROJECT</h3>
+
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla,
+            fuga eum quas cum quidem incidunt saepe voluptatem architecto amet
+            et maiores iure tenetur? Culpa atque ipsam blanditiis natus ut
+            maiores dolorum veritatis assumenda officiis alias reprehenderit
+            repellat vel explicabo animi nostrum nemo minus, aperiam quae sed?
+            Fuga soluta alias vero sed. Obcaecati ipsam eos dolore ab totam
+            natus reprehenderit quo provident ipsum quae deserunt cupiditate
+            ratione odit hic sit ex neque dolorum animi nesciunt, minus debitis
+            optio. Ullam eum molestias maiores praesentium at aut unde magnam
+            similique facilis aspernatur, consequatur, nulla nisi nam neque
+            dicta reiciendis ipsa inventore sit eveniet iste consequuntur?
+            Libero ab nulla quos minima commodi odit corrupti quas fugit, iste,
+            id quam, nisi nostrum exercitationem tenetur! Veniam magni
+            repellendus perferendis! Sapiente saepe recusandae cum dolore
+            consectetur nesciunt magnam enim fugiat. Quibusdam soluta architecto
+            delectus fugit distinctio mollitia repellendus ratione, molestias
+            harum ipsam ullam in minima nostrum obcaecati.
+          </p>
+        </div>
+        <div class="article" id="a-1">Project-1</div>
+        <div class="article" id="a-2">Project-2</div>
+        <div class="article" id="a-3">Project-3</div>
+      </div>
+      <div class="section-3" id="t2">
+        <h1>Technologies</h1>
+        <div class="container1">
+          <div class="image">
+            <img src="./assets/html.png" alt="" />
+          </div>
+          <h4>Introduction to HTML</h4>
+          <div class="text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            perspiciatis accusamus placeat cupiditate, sunt ab.
+          </div>
+          <div class="read-more">
+            <a href="./page1.html">READ MORE</a>
+          </div>
+        </div>
+        <div class="container1" id="c">
+          <div class="image">
+            <img src="./assets/css.png" alt="" id="css-img" />
+          </div>
+          <h4 id="css-h">Introduction to CSS</h4>
+          <div class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            nulla similique voluptatem quaerat explicabo.
+          </div>
+          <div class="read-more">
+            <a href="./page2.html">READ MORE</a>
+          </div>
+        </div>
+        <div class="container1">
+          <div class="image">
+            <img src="./assets/js.png" alt="" />
+          </div>
+          <h4>Introduction to JavaScript</h4>
+          <div class="text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam
+            suscipit impedit, praesentium quos distinctio debitis.
+          </div>
+          <div class="read-more">
+            <a href="./page3.html">READ MORE</a>
+          </div>
+        </div>
+        <div class="container1">
+          <div class="image">
+            <img src="./assets/bootstrap.png" alt="" />
+          </div>
+          <h4>Introduction to bootstrap</h4>
+          <div class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+            sequi unde accusamus mollitia ab omnis porro?
+          </div>
+          <div class="read-more">
+            <a href="./page4.html">READ MORE</a>
+          </div>
+        </div>
+      </div>
+      <div class="section-4">
+        <h1>CONTACT US</h1>
+        <div class="footer">
+          Practical -8
+          <a href="#">Back to top</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
